@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.http.get<{greeting:string}>("http://localhost:8080/greeting").subscribe(x=>{
+    this.http.get<{greeting:string}>("https://mevlutsapitest.azurewebsites.net/api/greeting").subscribe(x=>{
       console.log(x);
       this.title=x.greeting;
     })
