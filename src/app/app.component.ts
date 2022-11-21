@@ -23,7 +23,7 @@ export class AppComponent implements OnInit {
   }
 
   getUserInfo() {
-    const response = this.http.get<userDetails>('api/.auth/me');
+    const response = this.http.get<userDetails>('/.auth/me');
     response.subscribe(x=>{
       console.log("userDetails:"+x.userDetails);
     })
