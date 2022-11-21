@@ -24,7 +24,9 @@ export class AppComponent implements OnInit {
 
   getUserInfo() {
     const response = this.http.get<userDetails>('/.auth/me');
-    console.log("Response:"+response);
+    response.subscribe(x=>{
+      console.log("userDetails:"+x.userDetails);
+    })
   }
 }
 
